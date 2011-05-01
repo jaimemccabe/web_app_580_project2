@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  task: MyString
+  assigned_to: MyString
+  due_date: 2011-05-01
+  priority: MyString
+  level_of_effort: MyString
+
+two:
+  task: MyString
+  assigned_to: MyString
+  due_date: 2011-05-01
+  priority: MyString
+  level_of_effort: MyString
