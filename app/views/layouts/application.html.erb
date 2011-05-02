@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stickyapp</title>
-  <%= stylesheet_link_tag :all %>
+  <title>Dynamic Task Manager</title>
+  <%= stylesheet_link_tag "scaffold" %>
+  <%= stylesheet_link_tag "style", :media => "all" %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div id="header">
+  <h1>Dynamic Task Manager</h1>
 
+  <h2>Create tasks and track their progress</h2>
+</div>
+
+  <hr id="header_stripe"/>
+  <div id="page_container">
+  <div id="toppanel">
+    <div id="panel">
+    <div id="panel_contents"> </div>
+
+
+<div id="main">
 <%= yield %>
+</div>
+		
+		<div class="panel_button" style="display: visible;"><img src="images/expand.png"  alt="expand"/> <a href="#">Add Task</a> </div>
+	    <div class="panel_button" id="hide_button" style="display: none;"><img src="images/collapse.png" alt="collapse" /> <a href="#">Hide</a> </div>
 
+	  </div>
+
+	  <div id="content">
+	    <p></p>
+
+	     <form>
+	            <fieldset>
+	                <legend>Project Tasks</legend> 
+
+	                <p>This is a test to see if i can replicate the task boards at work.</p>
+
+
+			<div class="taskTable">
+				<div id="notStarted" class="column"> 
+					<h1>Not Started</h1> 
+					<div class="help">Drag a task from this list to place in queue, progress, or completed.</div> 
+				</div>
+				<div id="inQueue" class="column "> <h1>In Queue</h1> <div class="help">Dragging a task from here to place in progress or completed.</div> </div>
+				<div id="inProgress" class="column"> <h1>In Progress</h1> <div class="help">Drag a task to completed once the work for this task has been reviewed and accepted.</div> </div>
+				<div id="completed" class="column"> <h1>Completed</h1> <div class="help">Congrats! This stuff is done!</div> </div>
+				<div style="clear: both;"></div>
+			</div>
+
+
+	            </fieldset>
+	        </form>
 </body>
 </html>
